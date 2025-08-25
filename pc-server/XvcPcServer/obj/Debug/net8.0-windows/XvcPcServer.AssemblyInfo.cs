@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XvcPcServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7136963619f1cd0f9078549cd65eae5e10b0d57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29d0df7156c95f8176bef20cb066ea5fadf04b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("XvcPcServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XvcPcServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
