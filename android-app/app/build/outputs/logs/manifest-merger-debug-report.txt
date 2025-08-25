@@ -1,0 +1,288 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:1:1-18:12
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:1:1-18:12
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:1:1-18:12
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:1:1-18:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d83454389e27978268b1efa73217efca\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\2a36e557a898fd9fccbdfb1f259a4582\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b6ac0f4c1c8cb45ca6f3f1349e539b46\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\722a25ae7be68636d6dcd867bce731a1\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\cbb47882a27508c7ce8b42a53fb5f73a\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\ARAGON\.gradle\caches\8.9\transforms\3f66f3c20e1122859be4d974c3911e4f\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71dc2384c56011a54d3896204fc6d136\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\eda2acf22854c8901e39dd4a228dc043\transformed\jetified-activity-1.8.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\475d199e1da35f79ca3a2f43916aee79\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\24da3367c48746b80e468f5caaba664c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f66822c1c4d8d2fac6179747eed8aa56\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\bbfef4b01abaabfb6fc997a8860fe59b\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\30cd46f3ab4d1aeb9ffc0125a8a95f7c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\06c9ef2f23f15aba906f1d89e382f76a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\8740f243f38863a6c893bb8b41484348\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d87d99aebba6a173a18dbb371c79be75\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d869928ef0533cdb1dddd01fbe9f63d0\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\906b29bc9580022cd81ca7f5d1a820cc\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\041ba76b7516d68a52e58cda553fc0fb\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\0434862cb58282785d35c088a7d5fc56\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1e1c04764fbd580c73d1dd6de8548829\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\3adc7f8f0c8146f950018d6e726b1b9c\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\55e9a16af44781f7bc81fc538e16e175\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\fc0a63a8622e60c051f6dd81f49e16ef\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\02e639787a431015826ef97537034f78\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f3090812c645a5e8c20b486ced0fc951\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\047dcd36ac0308508c04ad9a0c4191cf\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\23388f581b6a49f697203c77c7724d0a\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\6b5784146877abc06408982faf1b6e3e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\93a3136e36d10516c266845ae3661135\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\aaab0111a0bd66eff66d3795ca87f553\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\0c56e277c037d0ec81767a83dedd9f6d\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\97c45f4ded81c849589b6c9abfae3303\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\83639a3112f9fc2e44f888ab6abcf5c2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\90b831620d875c94b750e842979bbaa2\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\5c9369b17bc086a310311521515cecd3\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:2:5-67
+	android:name
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:2:22-64
+application
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:3:5-17:19
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:3:5-17:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d83454389e27978268b1efa73217efca\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d83454389e27978268b1efa73217efca\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b6ac0f4c1c8cb45ca6f3f1349e539b46\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b6ac0f4c1c8cb45ca6f3f1349e539b46\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\93a3136e36d10516c266845ae3661135\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\93a3136e36d10516c266845ae3661135\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:6:9-35
+	android:allowBackup
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:5:9-35
+	android:theme
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:7:9-65
+	android:name
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:4:9-47
+activity#com.aragon.xvc.MainActivity
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:8:9-16:20
+	android:exported
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:10:13-36
+	android:configChanges
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:11:13-83
+	android:name
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:9:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:12:13-15:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:13:17-68
+	android:name
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:13:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:14:17-76
+	android:name
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:14:27-74
+uses-sdk
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d83454389e27978268b1efa73217efca\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d83454389e27978268b1efa73217efca\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\2a36e557a898fd9fccbdfb1f259a4582\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\2a36e557a898fd9fccbdfb1f259a4582\transformed\jetified-appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b6ac0f4c1c8cb45ca6f3f1349e539b46\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b6ac0f4c1c8cb45ca6f3f1349e539b46\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\722a25ae7be68636d6dcd867bce731a1\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\722a25ae7be68636d6dcd867bce731a1\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\cbb47882a27508c7ce8b42a53fb5f73a\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\cbb47882a27508c7ce8b42a53fb5f73a\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\ARAGON\.gradle\caches\8.9\transforms\3f66f3c20e1122859be4d974c3911e4f\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\ARAGON\.gradle\caches\8.9\transforms\3f66f3c20e1122859be4d974c3911e4f\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71dc2384c56011a54d3896204fc6d136\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71dc2384c56011a54d3896204fc6d136\transformed\jetified-emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\eda2acf22854c8901e39dd4a228dc043\transformed\jetified-activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\eda2acf22854c8901e39dd4a228dc043\transformed\jetified-activity-1.8.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\475d199e1da35f79ca3a2f43916aee79\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\475d199e1da35f79ca3a2f43916aee79\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\24da3367c48746b80e468f5caaba664c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\24da3367c48746b80e468f5caaba664c\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f66822c1c4d8d2fac6179747eed8aa56\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f66822c1c4d8d2fac6179747eed8aa56\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\bbfef4b01abaabfb6fc997a8860fe59b\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\bbfef4b01abaabfb6fc997a8860fe59b\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\30cd46f3ab4d1aeb9ffc0125a8a95f7c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\30cd46f3ab4d1aeb9ffc0125a8a95f7c\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\06c9ef2f23f15aba906f1d89e382f76a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\06c9ef2f23f15aba906f1d89e382f76a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\8740f243f38863a6c893bb8b41484348\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\8740f243f38863a6c893bb8b41484348\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d87d99aebba6a173a18dbb371c79be75\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d87d99aebba6a173a18dbb371c79be75\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d869928ef0533cdb1dddd01fbe9f63d0\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\d869928ef0533cdb1dddd01fbe9f63d0\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\906b29bc9580022cd81ca7f5d1a820cc\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\906b29bc9580022cd81ca7f5d1a820cc\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\041ba76b7516d68a52e58cda553fc0fb\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\041ba76b7516d68a52e58cda553fc0fb\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\0434862cb58282785d35c088a7d5fc56\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\0434862cb58282785d35c088a7d5fc56\transformed\jetified-savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1e1c04764fbd580c73d1dd6de8548829\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1e1c04764fbd580c73d1dd6de8548829\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\3adc7f8f0c8146f950018d6e726b1b9c\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\3adc7f8f0c8146f950018d6e726b1b9c\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\55e9a16af44781f7bc81fc538e16e175\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\55e9a16af44781f7bc81fc538e16e175\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\fc0a63a8622e60c051f6dd81f49e16ef\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\fc0a63a8622e60c051f6dd81f49e16ef\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\02e639787a431015826ef97537034f78\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\02e639787a431015826ef97537034f78\transformed\jetified-lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f3090812c645a5e8c20b486ced0fc951\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f3090812c645a5e8c20b486ced0fc951\transformed\jetified-core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\047dcd36ac0308508c04ad9a0c4191cf\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\047dcd36ac0308508c04ad9a0c4191cf\transformed\jetified-annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\23388f581b6a49f697203c77c7724d0a\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\23388f581b6a49f697203c77c7724d0a\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\6b5784146877abc06408982faf1b6e3e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\6b5784146877abc06408982faf1b6e3e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\93a3136e36d10516c266845ae3661135\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\93a3136e36d10516c266845ae3661135\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\aaab0111a0bd66eff66d3795ca87f553\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\aaab0111a0bd66eff66d3795ca87f553\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\0c56e277c037d0ec81767a83dedd9f6d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\0c56e277c037d0ec81767a83dedd9f6d\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\97c45f4ded81c849589b6c9abfae3303\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\97c45f4ded81c849589b6c9abfae3303\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\83639a3112f9fc2e44f888ab6abcf5c2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\83639a3112f9fc2e44f888ab6abcf5c2\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\90b831620d875c94b750e842979bbaa2\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\90b831620d875c94b750e842979bbaa2\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\5c9369b17bc086a310311521515cecd3\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\5c9369b17bc086a310311521515cecd3\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+	android:targetSdkVersion
+		INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\b612a519cb9da3df0b8a53441f529674\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+permission#com.aragon.xvc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+uses-permission#com.aragon.xvc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

@@ -1,0 +1,2 @@
+C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\dist\pc\win-x64\XvcPcServer.pdb
+C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\dist\pc\win-x64\XvcPcServer.exe

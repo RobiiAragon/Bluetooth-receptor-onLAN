@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "inputData": {
+      "type": "object",
+      "properties": {
+        "button": {
+          "type": "string",
+          "enum": ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "START", "SELECT"]
+        },
+        "state": {
+          "type": "string",
+          "enum": ["pressed", "released"]
+        },
+        "timestamp": {
+          "type": "integer"
+        }
+      },
+      "required": ["button", "state", "timestamp"]
+    },
+    "connectionInfo": {
+      "type": "object",
+      "properties": {
+        "ip": {
+          "type": "string",
+          "format": "ipv4"
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 1024,
+          "maximum": 65535
+        }
+      },
+      "required": ["ip", "port"]
+    }
+  },
+  "required": ["inputData", "connectionInfo"]
+}

@@ -1,0 +1,8 @@
+R_DEF: Internal format may change without notice
+local
+id btnConnect
+id etIp
+id etPort
+id spDevices
+id tvStatus
+layout activity_main
