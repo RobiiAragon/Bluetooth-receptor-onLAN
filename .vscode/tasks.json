@@ -1,0 +1,185 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build android app (android-pc-input-bridge)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1"
+			]
+		},
+		{
+			"label": "Rebuild android app after crash fixes",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-pc-input-bridge/android"
+			]
+		},
+		{
+			"label": "Rebuild after Android 15 crash guards",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-pc-input-bridge/android"
+			]
+		},
+		{
+			"label": "Build old android-app module (debug)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Build android-app with background service",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild android-app after imports fix",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild android-app after overlay input fix",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild android-app after persistence and auto-connect",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild android-app after service connection handoff",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild android-app after fix unresolved reference",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild with notif counters and overlay dispatch",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Rebuild after anti-flap changes",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		},
+		{
+			"label": "Build with low-latency and user-controlled connect",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-File",
+				"c:\\Users\\ARAGON\\Documents\\GitHub\\Bluetooth-receptor-onLAN\\build-android-debug.ps1",
+				"-Project",
+				"android-app"
+			]
+		}
+	]
+}

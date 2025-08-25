@@ -35,6 +35,12 @@
         android:layout_width="match_parent" android:layout_height="wrap_content"
         android:text="Conectar" android:layout_marginTop="16dp" />
 
+    <CheckBox
+        android:id="@+id/chkBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seguir en segundo plano (notificación) y capturar mando sin afectar otras apps" />
+
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="match_parent" android:layout_height="wrap_content"

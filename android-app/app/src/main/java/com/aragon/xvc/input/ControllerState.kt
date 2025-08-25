@@ -92,12 +92,10 @@ fun applyMotionToState(ev: MotionEvent, state: ControllerState) {
     state.lt = axisToByte(lt)
     state.rt = axisToByte(rt)
 
-    // DPAD por ejes HAT_X/HAT_Y (algunos mandos lo envían así)
+    // DPAD por ejes HAT_X/HAT_Y (comportamiento simple y directo)
     val hatX = ev.getAxisValue(MotionEvent.AXIS_HAT_X)
     val hatY = ev.getAxisValue(MotionEvent.AXIS_HAT_Y)
-    fun set(mask: Int, on: Boolean) {
-        state.btnMask = if (on) (state.btnMask or mask) else (state.btnMask and mask.inv())
-    }
+    fun set(mask: Int, on: Boolean) { state.btnMask = if (on) (state.btnMask or mask) else (state.btnMask and mask.inv()) }
     set(Btn.DPAD_LEFT, hatX < -0.5f)
     set(Btn.DPAD_RIGHT, hatX > 0.5f)
     set(Btn.DPAD_UP, hatY < -0.5f)
