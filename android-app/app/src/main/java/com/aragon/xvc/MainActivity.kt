@@ -1,9 +1,14 @@
 package com.aragon.xvc
 
 import android.app.Activity
+import android.Manifest
 import android.hardware.input.InputManager
 import android.os.Bundle
 import android.text.InputFilter
+import android.net.Uri
+import android.os.Build
+import android.provider.Settings
+import android.content.Intent
 import android.view.InputDevice
 import android.view.KeyEvent
 import android.view.MotionEvent
@@ -28,6 +33,7 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
     private lateinit var etPort: EditText
     private lateinit var btnConnect: Button
     private lateinit var tvStatus: TextView
+    private lateinit var chkBackground: CheckBox
 
     private lateinit var inputManager: InputManager
     private val client = ControllerClient()
@@ -46,6 +52,7 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
         etPort = findViewById(R.id.etPort)
         btnConnect = findViewById(R.id.btnConnect)
         tvStatus = findViewById(R.id.tvStatus)
+    chkBackground = findViewById(R.id.chkBackground)
 
         etPort.filters = arrayOf(InputFilter.LengthFilter(5))
 
@@ -56,6 +63,7 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
                 client.disconnect()
                 tvStatus.text = "Desconectado"
                 btnConnect.text = "Conectar"
+                stopService(Intent(this, InputService::class.java))
             } else {
                 val ipTxt = etIp.text.toString().trim()
                 val port = etPort.text.toString().toIntOrNull() ?: 39500
@@ -71,8 +79,11 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
                     val ok = client.connect(ipTxt, port)
                     runOnUiThread {
                         if (ok) {
+                            // Persist for service auto-connect
+                            getSharedPreferences("xvc", MODE_PRIVATE).edit().putString("host", ipTxt).putInt("port", port).apply()
                             tvStatus.text = "Conectado a $ipTxt:$port"
                             btnConnect.text = "Desconectar"
+                            if (chkBackground.isChecked) startBgCapture(ipTxt, port)
                         } else {
                             val err = client.getLastError() ?: "desconocido"
                             tvStatus.text = "Error de conexión: $err"
@@ -80,6 +91,18 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
                         btnConnect.isEnabled = true
                     }
                 }
+            }
+        }
+
+        // Si ya está conectado y activas el check, inicia el servicio con la conexión actual
+        chkBackground.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked && client.isConnected()) {
+                val ipTxt = etIp.text.toString().trim()
+                val port = etPort.text.toString().toIntOrNull() ?: 39500
+                getSharedPreferences("xvc", MODE_PRIVATE).edit().putString("host", ipTxt).putInt("port", port).apply()
+                startBgCapture(ipTxt, port)
+            } else if (!isChecked) {
+                try { stopService(Intent(this, InputService::class.java)) } catch (_: Exception) {}
             }
         }
 
@@ -101,6 +124,10 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
         super.onDestroy()
         inputManager.unregisterInputDeviceListener(this)
         client.disconnect()
+        // Mantener servicio si está habilitado el modo segundo plano
+        if (!this::chkBackground.isInitialized || !chkBackground.isChecked) {
+            try { stopService(Intent(this, InputService::class.java)) } catch (_: Exception) {}
+        }
     }
 
     // Captura de teclas
@@ -132,6 +159,38 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
             client.sendState(state)
             lastSent.copyFrom(state)
         }
+    }
+
+    private fun ensureBackgroundPermissions() {
+        if (Build.VERSION.SDK_INT >= 33) {
+            try { requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 100) } catch (_: Exception) {}
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+            try { startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName"))) } catch (_: Exception) {}
+        }
+        try {
+            val pm = getSystemService(android.content.Context.POWER_SERVICE) as android.os.PowerManager
+            if (!pm.isIgnoringBatteryOptimizations(packageName)) {
+                val i = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply { data = Uri.parse("package:$packageName") }
+                startActivity(i)
+            }
+        } catch (_: Exception) {}
+    }
+
+    private fun startBgCapture(host: String, port: Int) {
+        // Primero asegúrate de tener permiso de superposición; si no, no cedas la conexión aún
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
+            tvStatus.text = "Otorga permiso de superposición para capturar en segundo plano"
+            try { startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName"))) } catch (_: Exception) {}
+            return
+        }
+        ensureBackgroundPermissions()
+    // Ceder primero la conexión del Activity para evitar solapamiento
+    try { client.disconnect() } catch (_: Exception) {}
+    val intent = Intent(this, InputService::class.java).setAction(InputService.ACTION_CONNECT)
+            .putExtra("host", host).putExtra("port", port)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) startForegroundService(intent) else startService(intent)
+    tvStatus.text = "En segundo plano: $host:$port"
     }
 
     // Discovery: envía broadcast "XVC_DISCOVER" a 255.255.255.255:39501 y espera respuestas JSON {t:"xvc", ip, port, name}

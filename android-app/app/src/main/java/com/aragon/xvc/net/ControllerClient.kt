@@ -21,6 +21,7 @@ class ControllerClient {
     // Hilo de envío
     private val outQueue = LinkedBlockingQueue<String>()
     private var senderThread: Thread? = null
+    private var keepAliveThread: Thread? = null
 
     fun getLastError(): String? = lastError
 
@@ -34,7 +35,8 @@ class ControllerClient {
             s.keepAlive = true
             s.connect(InetSocketAddress(host, port), timeoutMs)
             socket = s
-            writer = BufferedWriter(OutputStreamWriter(s.getOutputStream(), Charsets.UTF_8))
+            // Buffer pequeño para reducir latencia; TCP_NODELAY ya activado
+            writer = BufferedWriter(OutputStreamWriter(s.getOutputStream(), Charsets.UTF_8), 512)
             running.set(true)
             // Arranca hilo de envío
             senderThread = thread(start = true, isDaemon = true, name = "xvc-sender") {
@@ -42,7 +44,13 @@ class ControllerClient {
                     while (running.get()) {
                         val msg = outQueue.take() // bloquea hasta que haya algo
                         val w = writer ?: continue
-                        w.write(msg)
+                        // Priorizar el último estado; si hubo acumulación, descarta backlog viejo
+                        var toSend = msg
+                        while (outQueue.isNotEmpty()) {
+                            val next = outQueue.poll() ?: break
+                            toSend = next
+                        }
+                        w.write(toSend)
                         w.write("\n")
                         w.flush()
                     }
@@ -50,6 +58,20 @@ class ControllerClient {
                     // cierre
                 } catch (_: Exception) {
                     // desconexión inesperada
+                    disconnect()
+                }
+            }
+            // Keepalive: enviar un ping cada 3s para evitar timeouts Wi-Fi/reposo
+            keepAliveThread = thread(start = true, isDaemon = true, name = "xvc-keepalive") {
+                try {
+                    while (running.get()) {
+                        val js = JSONObject().put("t", "ping").toString()
+                        if (outQueue.size > 10) outQueue.clear()
+                        outQueue.offer(js)
+                        Thread.sleep(3000)
+                    }
+                } catch (_: InterruptedException) {
+                } catch (_: Exception) {
                     disconnect()
                 }
             }
@@ -66,6 +88,8 @@ class ControllerClient {
         running.set(false)
         try { senderThread?.interrupt() } catch (_: Exception) {}
         senderThread = null
+    try { keepAliveThread?.interrupt() } catch (_: Exception) {}
+    keepAliveThread = null
         outQueue.clear()
         try { writer?.flush() } catch (_: Exception) {}
         try { writer?.close() } catch (_: Exception) {}
@@ -90,8 +114,8 @@ class ControllerClient {
                 .put("ry", state.ry)
                 .put("lt", state.lt)
                 .put("rt", state.rt)
-            // Evita crecer sin límite manteniendo solo el último si hay backlog
-            if (outQueue.size > 5) outQueue.clear()
+            // Evita backlog: mantener solo el último
+            outQueue.clear()
             outQueue.offer(js.toString())
         } catch (_: Exception) {
             disconnect()

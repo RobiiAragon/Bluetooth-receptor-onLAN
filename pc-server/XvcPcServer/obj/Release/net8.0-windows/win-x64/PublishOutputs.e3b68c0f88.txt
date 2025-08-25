@@ -1,0 +1,7 @@
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\XvcPcServer.pdb
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\D3DCompiler_47_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\PenImc_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\PresentationNative_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\vcruntime140_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\wpfgfx_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\XvcPcServer.exe

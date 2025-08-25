@@ -1,0 +1,7 @@
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\XvcPcServer.pdb
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\D3DCompiler_47_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\PenImc_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\PresentationNative_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\vcruntime140_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\wpfgfx_cor3.dll
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\dist\pc\win-x64\_staging\fca4079b-fda7-444c-a0af-95194cfd4e3b\XvcPcServer.exe

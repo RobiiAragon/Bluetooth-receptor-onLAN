@@ -9,119 +9,151 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:2:5-67
-11-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:2:22-64
-12
-13    <permission
-13-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
-14        android:name="com.aragon.xvc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.aragon.xvc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:3:5-17:19
-20        android:name="android.app.Application"
-20-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:4:9-47
-21        android:allowBackup="true"
-21-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:5:9-35
-22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-22-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
-23        android:debuggable="true"
-24        android:extractNativeLibs="false"
-25        android:label="XVC Client"
-25-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:6:9-35
-26        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-26-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:7:9-65
-27        <activity
-27-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:8:9-16:20
-28            android:name="com.aragon.xvc.MainActivity"
-28-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:9:13-41
-29            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-29-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:11:13-83
-30            android:exported="true" >
-30-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:10:13-36
-31            <intent-filter>
-31-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:12:13-15:29
-32                <action android:name="android.intent.action.MAIN" />
-32-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:13:17-68
-32-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:13:25-66
-33
-34                <category android:name="android.intent.category.LAUNCHER" />
-34-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:14:17-76
-34-->C:\Users\ARAGON\Documents\GitHub\Xbox virtual controller\android-app\app\src\main\AndroidManifest.xml:14:27-74
-35            </intent-filter>
-36        </activity>
-37
-38        <provider
-38-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-39            android:name="androidx.startup.InitializationProvider"
-39-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
-40            android:authorities="com.aragon.xvc.androidx-startup"
-40-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
-41            android:exported="false" >
-41-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
-42            <meta-data
-42-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
-43                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-43-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
-44                android:value="androidx.startup" />
-44-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
-45            <meta-data
-45-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-46                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-46-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-47                android:value="androidx.startup" />
-47-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-48            <meta-data
-48-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-49                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-49-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-50                android:value="androidx.startup" />
-50-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-51        </provider>
-52
-53        <receiver
-53-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-54            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-54-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-55            android:directBootAware="false"
-55-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-56            android:enabled="true"
-56-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-57            android:exported="true"
-57-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-58            android:permission="android.permission.DUMP" >
-58-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-59            <intent-filter>
-59-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-60                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-60-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-60-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-61            </intent-filter>
-62            <intent-filter>
-62-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-63                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-63-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-63-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-64            </intent-filter>
-65            <intent-filter>
-65-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-66                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-66-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-66-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-67            </intent-filter>
-68            <intent-filter>
-68-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-69                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-70            </intent-filter>
-71        </receiver>
-72    </application>
-73
-74</manifest>
+11-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:2:5-67
+11-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:2:22-64
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:3:5-77
+12-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:3:22-74
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+13-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:4:5-87
+13-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:4:22-84
+14    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+14-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:5:5-77
+14-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:5:22-74
+15    <uses-permission android:name="android.permission.WAKE_LOCK" />
+15-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:6:5-68
+15-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:6:22-65
+16    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+16-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:7:5-76
+16-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:7:22-73
+17    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+17-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:8:5-95
+17-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:8:22-92
+18    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+18-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:9:5-78
+18-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:9:22-75
+19
+20    <permission
+20-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+21        android:name="com.aragon.xvc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.aragon.xvc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:10:5-29:19
+27        android:name="android.app.Application"
+27-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:11:9-47
+28        android:allowBackup="true"
+28-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:12:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+30        android:debuggable="true"
+31        android:extractNativeLibs="false"
+32        android:label="XVC Client"
+32-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:13:9-35
+33        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+33-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:14:9-65
+34        <activity
+34-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:15:9-23:20
+35            android:name="com.aragon.xvc.MainActivity"
+35-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:16:13-41
+36            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+36-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:18:13-83
+37            android:exported="true" >
+37-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:17:13-36
+38            <intent-filter>
+38-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:19:13-22:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:20:17-68
+39-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:20:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:21:17-76
+41-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:21:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <service
+45-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:24:9-28:56
+46            android:name="com.aragon.xvc.InputService"
+46-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:25:13-41
+47            android:enabled="true"
+47-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:26:13-35
+48            android:exported="false"
+48-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:27:13-37
+49            android:foregroundServiceType="dataSync" />
+49-->C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:28:13-53
+50
+51        <provider
+51-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+53            android:authorities="com.aragon.xvc.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.3.0] C:\Users\ARAGON\.gradle\caches\8.9\transforms\f0c8fe36c75fd5eb42d73c18793c189d\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+58            <meta-data
+58-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+60                android:value="androidx.startup" />
+60-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\ARAGON\.gradle\caches\8.9\transforms\1040b48b6d9839d711814eb1cef277f7\transformed\jetified-lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+61            <meta-data
+61-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+62                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+62-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+63                android:value="androidx.startup" />
+63-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+64        </provider>
+65
+66        <receiver
+66-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+67            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+67-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+68            android:directBootAware="false"
+68-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+69            android:enabled="true"
+69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+70            android:exported="true"
+70-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+71            android:permission="android.permission.DUMP" >
+71-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+72            <intent-filter>
+72-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+73                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+73-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+74            </intent-filter>
+75            <intent-filter>
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+76                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+76-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+77            </intent-filter>
+78            <intent-filter>
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+79                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+79-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+80            </intent-filter>
+81            <intent-filter>
+81-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+82                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+82-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\34bfbf3567abae6b1a9115754abe55ec\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+83            </intent-filter>
+84        </receiver>
+85    </application>
+86
+87</manifest>

@@ -1,8 +1,11 @@
 R_DEF: Internal format may change without notice
 local
 id btnConnect
+id chkBackground
 id etIp
 id etPort
 id spDevices
 id tvStatus
 layout activity_main
+style AppTheme
+style Theme.Transparent
