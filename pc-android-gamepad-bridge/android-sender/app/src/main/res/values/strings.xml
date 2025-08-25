@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Gamepad Bridge</string>
+    <string name="input_service_started">Input Service Started</string>
+    <string name="input_service_stopped">Input Service Stopped</string>
+    <string name="error_sending_data">Error Sending Data</string>
+    <string name="data_sent_successfully">Data Sent Successfully</string>
+</resources>

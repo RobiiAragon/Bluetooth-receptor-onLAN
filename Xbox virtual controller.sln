@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pc-server", "pc-server", "{7F17FDA3-8E7E-A235-7AA1-D536900C7043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XvcPcServer", "pc-server\XvcPcServer\XvcPcServer.csproj", "{474C9DEB-2E1C-F3F1-7A7A-A0415AADB4C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{474C9DEB-2E1C-F3F1-7A7A-A0415AADB4C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474C9DEB-2E1C-F3F1-7A7A-A0415AADB4C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474C9DEB-2E1C-F3F1-7A7A-A0415AADB4C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474C9DEB-2E1C-F3F1-7A7A-A0415AADB4C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{474C9DEB-2E1C-F3F1-7A7A-A0415AADB4C5} = {7F17FDA3-8E7E-A235-7AA1-D536900C7043}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB0F30D3-CB5A-4008-ACF9-21474A92C67E}
+	EndGlobalSection
+EndGlobal
