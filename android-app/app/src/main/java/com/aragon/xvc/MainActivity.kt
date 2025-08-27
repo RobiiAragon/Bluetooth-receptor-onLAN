@@ -15,8 +15,8 @@ import android.view.MotionEvent
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.aragon.xvc.input.ControllerState
-import com.aragon.xvc.input.applyKeyToState
-import com.aragon.xvc.input.applyMotionToState
+import com.aragon.xvc.input.getProfileForDevice
+import com.aragon.xvc.input.applyKeyToStateWithProfile
 import com.aragon.xvc.net.ControllerClient
 import org.json.JSONObject
 import java.net.DatagramPacket
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
     private val state = ControllerState()
     private val lastSent = ControllerState()
     private var selectedDeviceId: Int? = null
+    private var currentProfile = getProfileForDevice(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -134,7 +135,9 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
     override fun dispatchKeyEvent(event: KeyEvent): Boolean {
         val target = selectedDeviceId
         if (target != null && event.deviceId == target) {
-            val handled = applyKeyToState(event, state)
+            val device = event.device
+            currentProfile = getProfileForDevice(device)
+            val handled = applyKeyToStateWithProfile(event, state, currentProfile)
             if (handled) sendIfChanged()
             return handled || super.dispatchKeyEvent(event)
         }
@@ -147,7 +150,9 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
                 (event.source and InputDevice.SOURCE_JOYSTICK == InputDevice.SOURCE_JOYSTICK)
         val target = selectedDeviceId
         if (sourceIsGamepad && target != null && event.deviceId == target) {
-            applyMotionToState(event, state)
+            val device = event.device
+            currentProfile = getProfileForDevice(device)
+            currentProfile.applyMotionToState(event, state)
             sendIfChanged()
             return true
         }

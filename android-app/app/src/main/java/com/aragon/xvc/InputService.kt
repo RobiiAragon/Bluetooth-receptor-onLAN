@@ -16,8 +16,8 @@ import android.util.Log
 import android.view.*
 import androidx.core.app.NotificationCompat
 import com.aragon.xvc.input.ControllerState
-import com.aragon.xvc.input.applyKeyToState
-import com.aragon.xvc.input.applyMotionToState
+import com.aragon.xvc.input.getProfileForDevice
+import com.aragon.xvc.input.applyKeyToStateWithProfile
 import com.aragon.xvc.net.ControllerClient
 import org.json.JSONObject
 import java.net.DatagramPacket
@@ -38,6 +38,7 @@ class InputService : Service() {
     private val client = ControllerClient()
     private val state = ControllerState()
     private val last = ControllerState()
+    private var currentProfile = getProfileForDevice(null)
 
     private val executor = Executors.newSingleThreadExecutor()
     @Volatile private var targetHost: String? = null
@@ -129,31 +130,34 @@ class InputService : Service() {
         )
         p.gravity = Gravity.START or Gravity.TOP
     overlayView = CaptureOverlay(this) {
-            val k = it.first
-            var changed = applyKeyToState(k, state)
-            it.second?.let { ev ->
-                val before = state.copy()
-                val beforeBtns = before.btnMask
-                applyMotionToState(ev, state)
-                // Deadzone y filtro leve en ejes; los botones se comparan aparte
-                fun near(a: Int, b: Int, dz: Int) = kotlin.math.abs(a - b) <= dz
-                val axisChanged = (!near(state.lx, before.lx, 500) || !near(state.ly, before.ly, 500) ||
-                                   !near(state.rx, before.rx, 500) || !near(state.ry, before.ry, 500) ||
-                                   !near(state.lt, before.lt, 2) || !near(state.rt, before.rt, 2))
-                val btnChanged = state.btnMask != beforeBtns
-                if (axisChanged || btnChanged) {
-                    changed = true
-                } else {
-                    // revertir sólo ejes (mantener btnMask intacto)
-                    state.lx = before.lx; state.ly = before.ly
-                    state.rx = before.rx; state.ry = before.ry
-                    state.lt = before.lt; state.rt = before.rt
-                }
-            }
-            if (changed) {
-                sendIfChanged(); recordInput()
+        val k = it.first
+        // Selecciona el profile según el dispositivo del evento
+        val device = k.device
+        currentProfile = getProfileForDevice(device)
+        var changed = applyKeyToStateWithProfile(k, state, currentProfile)
+        it.second?.let { ev ->
+            val before = state.copy()
+            val beforeBtns = before.btnMask
+            currentProfile.applyMotionToState(ev, state)
+            // Deadzone y filtro leve en ejes; los botones se comparan aparte
+            fun near(a: Int, b: Int, dz: Int) = kotlin.math.abs(a - b) <= dz
+            val axisChanged = (!near(state.lx, before.lx, 500) || !near(state.ly, before.ly, 500) ||
+                               !near(state.rx, before.rx, 500) || !near(state.ry, before.ry, 500) ||
+                               !near(state.lt, before.lt, 2) || !near(state.rt, before.rt, 2))
+            val btnChanged = state.btnMask != beforeBtns
+            if (axisChanged || btnChanged) {
+                changed = true
+            } else {
+                // revertir sólo ejes (mantener btnMask intacto)
+                state.lx = before.lx; state.ly = before.ly
+                state.rx = before.rx; state.ry = before.ry
+                state.lt = before.lt; state.rt = before.rt
             }
         }
+        if (changed) {
+            sendIfChanged(); recordInput()
+        }
+    }
     try { windowManager?.addView(overlayView, p); overlayView?.requestFocus() } catch (_: Exception) {}
     }
 

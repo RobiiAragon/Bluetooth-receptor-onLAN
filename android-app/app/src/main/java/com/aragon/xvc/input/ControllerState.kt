@@ -1,10 +1,17 @@
-
 package com.aragon.xvc.input
-
 
 import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.InputDevice
+
+// --- Compatibilidad KeyEvent PlayStation ---
+@Suppress("ClassName")
+object PSKeyCodes {
+    // Valores oficiales de Android KeyEvent (https://developer.android.com/reference/android/view/KeyEvent)
+    const val KEYCODE_BUTTON_CIRCLE = 111
+    const val KEYCODE_BUTTON_SQUARE = 99
+    const val KEYCODE_BUTTON_TRIANGLE = 100
+}
 
 
 data class ControllerState(
@@ -112,9 +119,9 @@ object StadiaProfile : ControllerProfile {
 object PlayStationProfile : ControllerProfile {
     override fun mapKeyToBtn(keyCode: Int): Int = when (keyCode) {
         KeyEvent.KEYCODE_BUTTON_X -> Btn.A // X (abajo)
-        KeyEvent.KEYCODE_BUTTON_CIRCLE -> Btn.B // Círculo (derecha)
-        KeyEvent.KEYCODE_BUTTON_SQUARE -> Btn.X // Cuadrado (izquierda)
-        KeyEvent.KEYCODE_BUTTON_TRIANGLE -> Btn.Y // Triángulo (arriba)
+        PSKeyCodes.KEYCODE_BUTTON_CIRCLE -> Btn.B // Círculo (derecha)
+        PSKeyCodes.KEYCODE_BUTTON_SQUARE -> Btn.X // Cuadrado (izquierda)
+        PSKeyCodes.KEYCODE_BUTTON_TRIANGLE -> Btn.Y // Triángulo (arriba)
         KeyEvent.KEYCODE_BUTTON_L1 -> Btn.LB
         KeyEvent.KEYCODE_BUTTON_R1 -> Btn.RB
         KeyEvent.KEYCODE_BUTTON_THUMBL -> Btn.LS
