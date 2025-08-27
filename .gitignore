@@ -1,2 +1,4 @@
 /pc-server/XvcPcServer/bin
 /publish
+*.exe
+*.pdb
