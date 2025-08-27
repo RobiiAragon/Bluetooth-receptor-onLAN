@@ -18,7 +18,7 @@ Turn any Android phone/tablet into a low-latency gamepad for your Windows PC ove
 - A Bluetooth gamepad paired with the Android device (Xbox one tested)
 - Windows 10/11
 - .NET 8 SDK (for building the PC server)
-- ViGEmBus driver (virtual controller) from https://vigem.org/Downloads/
+- ViGEmBus driver (virtual controller) from https://vigembusdriver.com/
 - LAN connectivity between phone and PC (same network)
 
 ## Quick start
