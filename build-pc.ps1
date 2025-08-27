@@ -1,7 +1,7 @@
 # Script para compilar el proyecto de Windows
 
 $projectPath = ".\pc-server\XvcPcServer\XvcPcServer.csproj"
-$outputDir = ".\publish"
+$outputDir = ".\publishWin"
 
 dotnet publish $projectPath `
   -c Release `
