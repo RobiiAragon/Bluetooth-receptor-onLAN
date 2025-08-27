@@ -7,8 +7,9 @@ namespace XvcPcServer
     {
         private readonly TextBox logBox;
         private XvcServer? server;
-        public LogForm()
+        public LogForm(XvcServer? server)
         {
+            this.server = server;
             this.Text = "XvcPcServer - Log";
             this.Width = 600;
             this.Height = 400;
@@ -25,8 +26,7 @@ namespace XvcPcServer
         }
         private void LogForm_Load(object? sender, EventArgs e)
         {
-            server = new XvcServer(AppendLog);
-            server.Start();
+            server?.Start();
         }
         public void StopServer()
         {

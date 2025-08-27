@@ -8,11 +8,14 @@ namespace XvcPcServer
     {
         private readonly NotifyIcon trayIcon;
         private readonly Form logForm;
+        private XvcServer? server;
 
         public TrayAppContext()
         {
-            logForm = new LogForm();
-            logForm.FormClosing += (s, e) => {
+            server = new XvcServer(AppendLog);
+            logForm = new LogForm(server);
+            logForm.FormClosing += (s, e) =>
+            {
                 e.Cancel = true;
                 logForm.Hide();
             };
@@ -29,7 +32,13 @@ namespace XvcPcServer
             trayIcon.DoubleClick += (s, e) => ShowLogForm();
             ShowLogForm();
         }
-
+        private void AppendLog(string text)
+        {
+            if (logForm is LogForm lf)
+            {
+                lf.AppendLog(text);
+            }
+        }
         private void ShowLogForm()
         {
             if (!logForm.Visible)
@@ -47,6 +56,7 @@ namespace XvcPcServer
                 stop?.Invoke(lf, null);
             }
             Application.Exit();
+            Environment.Exit(0);
         }
     }
 }
