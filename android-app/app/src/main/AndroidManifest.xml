@@ -11,6 +11,7 @@
         android:name="android.app.Application"
         android:allowBackup="true"
         android:label="XVC Client"
+        android:icon="@mipmap/ic_launcher"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
             android:name=".MainActivity"

@@ -1,0 +1,2 @@
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\publishWinOneFile\XvcPcServer.pdb
+C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\publishWinOneFile\XvcPcServer.exe

@@ -7,5 +7,6 @@ id etPort
 id spDevices
 id tvStatus
 layout activity_main
+mipmap ic_launcher
 style AppTheme
 style Theme.Transparent
