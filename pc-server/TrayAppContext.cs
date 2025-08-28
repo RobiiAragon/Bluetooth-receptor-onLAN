@@ -22,7 +22,7 @@ namespace XvcPcServer
 
             trayIcon = new NotifyIcon()
             {
-                Icon = SystemIcons.Application,
+                Icon = System.Drawing.Icon.ExtractAssociatedIcon(Application.ExecutablePath),
                 ContextMenuStrip = new ContextMenuStrip(),
                 Text = "XvcPcServer",
                 Visible = true
