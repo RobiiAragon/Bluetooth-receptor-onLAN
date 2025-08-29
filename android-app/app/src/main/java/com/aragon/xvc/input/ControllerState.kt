@@ -145,21 +145,23 @@ object PlayStationProfile : ControllerProfile {
 // Profile para Nintendo Switch Pro Controller
 object SwitchProProfile : ControllerProfile {
     override fun mapKeyToBtn(keyCode: Int): Int = when (keyCode) {
-        KeyEvent.KEYCODE_BUTTON_B -> Btn.A // B (abajo)
-        KeyEvent.KEYCODE_BUTTON_A -> Btn.B // A (derecha)
-        KeyEvent.KEYCODE_BUTTON_Y -> Btn.X // Y (izquierda)
-        KeyEvent.KEYCODE_BUTTON_X -> Btn.Y // X (arriba)
-        KeyEvent.KEYCODE_BUTTON_L1 -> Btn.LB
-        KeyEvent.KEYCODE_BUTTON_R1 -> Btn.RB
-        KeyEvent.KEYCODE_BUTTON_THUMBL -> Btn.LS
-        KeyEvent.KEYCODE_BUTTON_THUMBR -> Btn.RS
-        KeyEvent.KEYCODE_BUTTON_SELECT, KeyEvent.KEYCODE_BACK -> Btn.BACK
-        KeyEvent.KEYCODE_BUTTON_START -> Btn.START
-        KeyEvent.KEYCODE_BUTTON_MODE -> Btn.GUIDE
-        KeyEvent.KEYCODE_DPAD_UP -> Btn.DPAD_UP
-        KeyEvent.KEYCODE_DPAD_DOWN -> Btn.DPAD_DOWN
-        KeyEvent.KEYCODE_DPAD_LEFT -> Btn.DPAD_LEFT
-        KeyEvent.KEYCODE_DPAD_RIGHT -> Btn.DPAD_RIGHT
+        KeyEvent.KEYCODE_BUTTON_B -> Btn.B // B (derecha)
+        KeyEvent.KEYCODE_BUTTON_A -> Btn.A // A (abajo)
+        KeyEvent.KEYCODE_BUTTON_Y -> Btn.Y // Y (arriba)
+        KeyEvent.KEYCODE_BUTTON_X -> Btn.X // X (izquierda)
+        KeyEvent.KEYCODE_BUTTON_L1 -> Btn.LB // L1
+        KeyEvent.KEYCODE_BUTTON_R1 -> Btn.RB // R1
+        KeyEvent.KEYCODE_BUTTON_L2 -> Btn.LT // ZL (gatillo izquierdo)
+        KeyEvent.KEYCODE_BUTTON_R2 -> Btn.RT // ZR (gatillo derecho)
+        KeyEvent.KEYCODE_BUTTON_THUMBL -> Btn.LS // Stick L
+        KeyEvent.KEYCODE_BUTTON_THUMBR -> Btn.RS // Stick R
+        KeyEvent.KEYCODE_BUTTON_SELECT, KeyEvent.KEYCODE_BACK -> Btn.BACK // Back
+        KeyEvent.KEYCODE_BUTTON_START -> Btn.START // Start
+        KeyEvent.KEYCODE_BUTTON_MODE -> Btn.GUIDE // Guide
+        KeyEvent.KEYCODE_DPAD_UP -> Btn.DPAD_UP // D-Pad Up
+        KeyEvent.KEYCODE_DPAD_DOWN -> Btn.DPAD_DOWN // D-Pad Down
+        KeyEvent.KEYCODE_DPAD_LEFT -> Btn.DPAD_LEFT // D-Pad Left
+        KeyEvent.KEYCODE_DPAD_RIGHT -> Btn.DPAD_RIGHT // D-Pad Right
         else -> 0
     }
 
@@ -232,6 +234,8 @@ object Btn {
     const val DPAD_DOWN = 1 shl 12
     const val DPAD_LEFT = 1 shl 13
     const val DPAD_RIGHT = 1 shl 14
+    const val LT = 1 shl 15
+    const val RT = 1 shl 16
 }
 
 // DEPRECATED: Usa ControllerProfile.mapKeyToBtn
