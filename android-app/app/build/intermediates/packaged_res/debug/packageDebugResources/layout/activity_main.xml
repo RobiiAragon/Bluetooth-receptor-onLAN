@@ -1,12 +1,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:padding="16dp"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/background_app_dark">
+    android:background="?android:colorBackground">
 
     <TextView
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="Mando Bluetooth"
-        android:textColor="@color/text_app_dark" />
+        android:textColor="?android:textColorPrimary" />
 
     <Spinner
         android:id="@+id/spDevices"
@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="IP del PC" android:layout_marginTop="12dp"
-        android:textColor="@color/text_app_dark"/>
+        android:textColor="?android:textColorPrimary"/>
 
     <EditText
         android:id="@+id/etIp"
@@ -26,7 +26,7 @@
     <TextView
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:text="Puerto" android:layout_marginTop="12dp"
-        android:textColor="@color/text_app_dark"/>
+        android:textColor="?android:textColorPrimary"/>
 
     <EditText
         android:id="@+id/etPort"
@@ -37,7 +37,9 @@
     <Button
         android:id="@+id/btnConnect"
         android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="Conectar" android:layout_marginTop="16dp" />
+        android:text="Conectar" android:layout_marginTop="16dp"
+        android:textColor="?android:textColorPrimary"
+        android:background="?android:colorButtonNormal" />
 
     <CheckBox
         android:id="@+id/chkBackground"
@@ -49,19 +51,23 @@
         android:id="@+id/tvStatus"
         android:layout_width="match_parent" android:layout_height="wrap_content"
         android:text="Desconectado" android:layout_marginTop="12dp"
-        android:textColor="@color/text_app_dark" />
+        android:textColor="?android:textColorPrimary" />
 
     <Button
         android:id="@+id/btnScreenOff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Apagar/Encender pantalla (simulado)"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textColor="?android:textColorPrimary"
+        android:background="?android:colorButtonNormal" />
 
     <Button
         android:id="@+id/btnDarkMode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Alternar modo oscuro"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="8dp"
+        android:textColor="?android:textColorPrimary"
+        android:background="?android:colorButtonNormal" />
 </LinearLayout>
