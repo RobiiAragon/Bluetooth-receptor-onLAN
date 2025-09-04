@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_app_dark">#222222</color>
+    <color name="button_app_dark">#333333</color>
+    <color name="button_text_dark">#FFFFFF</color>
+    <color name="text_app_dark">#EEEEEE</color>
+</resources>

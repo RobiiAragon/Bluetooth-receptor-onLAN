@@ -1270,6 +1270,8 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color background_app_dark
+color background_app_light
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -1280,8 +1282,12 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color button_app_dark
+color button_app_light
 color button_material_dark
 color button_material_light
+color button_text_dark
+color button_text_light
 color call_notification_answer_color
 color call_notification_decline_color
 color cardview_dark_background
@@ -2012,6 +2018,8 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color text_app_dark
+color text_app_light
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -3094,6 +3102,8 @@ id blocking
 id bottom
 id bounce
 id btnConnect
+id btnDarkMode
+id btnScreenOff
 id buttonPanel
 id cancel_button
 id center

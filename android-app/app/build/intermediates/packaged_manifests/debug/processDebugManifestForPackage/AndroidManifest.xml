@@ -31,7 +31,7 @@
         android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="XVC Client"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.aragon.xvc.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

@@ -109,15 +109,15 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\ARAGON\.gradle\cac
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\ARAGON\.gradle\caches\8.9\transforms\71ee4e84f8a209c8f52c3ff6175f1a26\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:13:5-31
 	android:icon
-		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:14:5-39
 	android:allowBackup
-		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:12:5-31
 	android:theme
-		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:15:9-65
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:15:5-36
 	android:name
-		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:11:9-47
+		ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:11:5-43
 activity#com.aragon.xvc.MainActivity
 ADDED from C:\Users\ARAGON\Documents\GitHub\Bluetooth-receptor-onLAN\android-app\app\src\main\AndroidManifest.xml:16:9-24:20
 	android:exported

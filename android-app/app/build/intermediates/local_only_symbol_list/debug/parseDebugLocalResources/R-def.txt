@@ -1,6 +1,16 @@
 R_DEF: Internal format may change without notice
 local
+color background_app_dark
+color background_app_light
+color button_app_dark
+color button_app_light
+color button_text_dark
+color button_text_light
+color text_app_dark
+color text_app_light
 id btnConnect
+id btnDarkMode
+id btnScreenOff
 id chkBackground
 id etIp
 id etPort
