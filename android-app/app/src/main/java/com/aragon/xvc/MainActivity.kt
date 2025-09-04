@@ -27,6 +27,22 @@ import java.nio.charset.Charset
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
+    private fun removeScreenOverlay() {
+        overlayView?.let {
+            try {
+                overlayWindowManager?.removeView(it)
+            } catch (_: Exception) {}
+        }
+        overlayView = null
+        overlayWindowManager = null
+        try {
+            val lp = window.attributes
+            lp.screenBrightness = -1f // restaurar por defecto
+            window.attributes = lp
+        } catch (_: Exception) {}
+        isScreenOff = false
+        btnScreenOff.text = "Apagar pantalla (simulado)"
+    }
 
     private lateinit var spDevices: Spinner
     private lateinit var etIp: EditText
@@ -34,6 +50,11 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
     private lateinit var btnConnect: Button
     private lateinit var tvStatus: TextView
     private lateinit var chkBackground: CheckBox
+    private lateinit var btnScreenOff: Button
+    private lateinit var btnDarkMode: Button
+    private var isScreenOff = false
+    private var overlayView: android.view.View? = null
+    private var overlayWindowManager: android.view.WindowManager? = null
 
     private lateinit var inputManager: InputManager
     private val client = ControllerClient()
@@ -43,6 +64,16 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
     private var currentProfile = getProfileForDevice(null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Forzar modo oscuro por defecto
+        androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES)
+
+        // Si el usuario cambió el modo, restaurar preferencia
+        val prefs = getSharedPreferences("xvc", MODE_PRIVATE)
+        val userPref = prefs.getInt("nightMode", -1)
+        if (userPref != -1) {
+            androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(userPref)
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         inputManager = getSystemService(Activity.INPUT_SERVICE) as InputManager
@@ -53,7 +84,65 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
         etPort = findViewById(R.id.etPort)
         btnConnect = findViewById(R.id.btnConnect)
         tvStatus = findViewById(R.id.tvStatus)
-    chkBackground = findViewById(R.id.chkBackground)
+        chkBackground = findViewById(R.id.chkBackground)
+        btnScreenOff = findViewById(R.id.btnScreenOff)
+        btnDarkMode = findViewById(R.id.btnDarkMode)
+
+        btnScreenOff.setOnClickListener {
+            if (!isScreenOff) {
+                // Crear overlay negro SYSTEM_ALERT_WINDOW para cubrir toda la pantalla
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M && !android.provider.Settings.canDrawOverlays(this)) {
+                    Toast.makeText(this, "Otorga permiso de superposición para simular pantalla apagada", Toast.LENGTH_LONG).show()
+                    try {
+                        startActivity(Intent(android.provider.Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:$packageName")))
+                    } catch (_: Exception) {}
+                    return@setOnClickListener
+                }
+                overlayView = android.view.View(this).apply {
+                    setBackgroundColor(android.graphics.Color.BLACK)
+                    alpha = 1f
+                    setOnTouchListener { _, _ ->
+                        // Quitar overlay y restaurar brillo al tocar cualquier parte
+                        removeScreenOverlay()
+                        true
+                    }
+                }
+                val params = android.view.WindowManager.LayoutParams(
+                    android.view.WindowManager.LayoutParams.MATCH_PARENT,
+                    android.view.WindowManager.LayoutParams.MATCH_PARENT,
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O)
+                        android.view.WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                    else
+                        android.view.WindowManager.LayoutParams.TYPE_PHONE,
+                    android.view.WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or android.view.WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+                    android.graphics.PixelFormat.TRANSLUCENT
+                )
+                overlayWindowManager = getSystemService(android.content.Context.WINDOW_SERVICE) as android.view.WindowManager
+                overlayWindowManager?.addView(overlayView, params)
+                // Guardar brillo actual y poner al mínimo
+                try {
+                    val lp = window.attributes
+                    lp.screenBrightness = 0.01f
+                    window.attributes = lp
+                } catch (_: Exception) {}
+                isScreenOff = true
+                btnScreenOff.text = "Encender pantalla"
+            } else {
+                removeScreenOverlay()
+            }
+        }
+
+        btnDarkMode.setOnClickListener {
+            val currentNightMode = resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK
+            val newMode = if (currentNightMode == android.content.res.Configuration.UI_MODE_NIGHT_YES)
+                androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
+            else
+                androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
+            // Guardar selección en SharedPreferences
+            getSharedPreferences("xvc", MODE_PRIVATE).edit().putInt("nightMode", newMode).apply()
+            androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(newMode)
+            recreate() // Recargar la actividad para aplicar el cambio de tema
+        }
 
         etPort.filters = arrayOf(InputFilter.LengthFilter(5))
 
@@ -125,6 +214,8 @@ class MainActivity : AppCompatActivity(), InputManager.InputDeviceListener {
         super.onDestroy()
         inputManager.unregisterInputDeviceListener(this)
         client.disconnect()
+    // Limpiar overlay si está activo
+    removeScreenOverlay()
         // Mantener servicio si está habilitado el modo segundo plano
         if (!this::chkBackground.isInitialized || !chkBackground.isChecked) {
             try { stopService(Intent(this, InputService::class.java)) } catch (_: Exception) {}
