@@ -49,6 +49,10 @@ class InputService : Service() {
     @Volatile private var desiredConnected: Boolean = false
     // Lógica simple (sin agregador) como la versión que funcionaba
 
+    // Hilo para enviar el estado periódicamente
+    private var periodicSenderThread: Thread? = null
+    @Volatile private var periodicSenderRunning: Boolean = false
+
     override fun onBind(intent: Intent?): IBinder? = null
 
     override fun onCreate() {
@@ -67,6 +71,9 @@ class InputService : Service() {
                 startOrRetryConnect()
             }
         } catch (_: Exception) {}
+
+    // Iniciar el hilo de envío periódico
+    startPeriodicSender()
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -255,12 +262,40 @@ class InputService : Service() {
 
     override fun onDestroy() {
         super.onDestroy()
-    try { overlayView?.let { windowManager?.removeView(it) } } catch (_: Exception) {}
-    desiredConnected = false
-    client.disconnect()
+        try { overlayView?.let { windowManager?.removeView(it) } } catch (_: Exception) {}
+        desiredConnected = false
+        client.disconnect()
         executor.shutdownNow()
+        stopPeriodicSender()
         try { wakeLock?.release() } catch (_: Exception) {}
         try { wifiLock?.release() } catch (_: Exception) {}
+    }
+
+    // --- Envío periódico del estado del mando ---
+    private fun startPeriodicSender() {
+        periodicSenderRunning = true
+        periodicSenderThread = Thread {
+            while (periodicSenderRunning) {
+                try {
+                    // Enviar siempre el estado actual, aunque no haya cambios
+                    client.sendState(state)
+                    Thread.sleep(0, 500_000) // 0.5 ms = 500,000 ns
+                } catch (_: InterruptedException) {
+                    break
+                } catch (_: Exception) {
+                    // Ignorar errores de red
+                }
+            }
+        }
+        periodicSenderThread?.priority = Thread.MAX_PRIORITY
+        periodicSenderThread?.isDaemon = true
+        periodicSenderThread?.start()
+    }
+
+    private fun stopPeriodicSender() {
+        periodicSenderRunning = false
+        try { periodicSenderThread?.interrupt() } catch (_: Exception) {}
+        periodicSenderThread = null
     }
 
     companion object {
