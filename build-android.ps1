@@ -1,4 +1,4 @@
-# Script para compilar el APK de Android
+# Builds the Android APK
 
 $projectDir = "android-app"
 $outputDir = ".\publishApk"
@@ -14,7 +14,7 @@ if ($apk) {
     if (!(Test-Path $outputDir)) { New-Item -ItemType Directory -Path $outputDir | Out-Null }
     $dest = Join-Path $outputDir $apk.Name
     Copy-Item $apk.FullName $dest -Force
-    Write-Host "Build completo. APK copiado a $dest"
+    Write-Host "Build complete. APK copied to $dest"
 } else {
-    Write-Host "No se encontró ningún APK generado."
+    Write-Host "No APK was produced."
 }

@@ -1,7 +1,23 @@
-/pc-server/XvcPcServer/bin
+# Build output
+bin/
+obj/
+build/
 /publishWin
 /publishApk
 *.exe
 *.pdb
 *.apk
-*.apk
+*.aab
+
+# Gradle / Android
+.gradle/
+.kotlin/
+local.properties
+/tools/
+*.iml
+.idea/
+captures/
+
+# Visual Studio
+.vs/
+*.user

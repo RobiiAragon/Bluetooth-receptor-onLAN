@@ -1,4 +1,4 @@
-# Compila el APK de Android y lo instala por adb
+# Builds the Android APK and installs it over adb
 
 $projectDir = "android-app"
 $outputDir = ".\publishApk"
@@ -14,10 +14,10 @@ if ($apk) {
     if (!(Test-Path $outputDir)) { New-Item -ItemType Directory -Path $outputDir | Out-Null }
     $dest = Join-Path $outputDir $apk.Name
     Copy-Item $apk.FullName $dest -Force
-    Write-Host "Build completo. APK copiado a $dest"
-    # Instalar el APK por adb
+    Write-Host "Build complete. APK copied to $dest"
+    # Install the APK over adb
     & adb install -r $dest
-    Write-Host "APK instalado en el dispositivo Android."
+    Write-Host "APK installed on the Android device."
 } else {
-    Write-Host "No se encontró ningún APK generado."
+    Write-Host "No APK was produced."
 }
