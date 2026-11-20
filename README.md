@@ -4,7 +4,7 @@
 
 **Turn any Android phone into a low-latency wireless gamepad receiver for your Windows PC.**
 
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white) ![Android 8+](https://img.shields.io/badge/Android%208+-3DDC84?style=flat-square&logo=android&logoColor=white) ![.NET 8](https://img.shields.io/badge/.NET%208-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white) ![License MIT](https://img.shields.io/badge/License%20MIT-2ea44f?style=flat-square)
+[![CI](https://github.com/RobiiAragon/Bluetooth-receptor-onLAN/actions/workflows/ci.yml/badge.svg)](https://github.com/RobiiAragon/Bluetooth-receptor-onLAN/actions/workflows/ci.yml) ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white) ![Android 7+](https://img.shields.io/badge/Android%207+-3DDC84?style=flat-square&logo=android&logoColor=white) ![.NET 8](https://img.shields.io/badge/.NET%208-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white) ![License MIT](https://img.shields.io/badge/License%20MIT-2ea44f?style=flat-square)
 
 **English** · [Español](README.es.md)
 
@@ -27,12 +27,13 @@ flowchart LR
 - 🔎 Automatic discovery or manual `IP:port`.
 - 🔋 Runs in the background as a foreground service with a tiny overlay; optional battery / Wi-Fi performance hints.
 - 🪟 Windows tray app with a log window.
+- 🛟 Fail-safe: if the phone goes quiet for 8 s (Wi-Fi drop, phone asleep) the server releases every button and stick, so nothing stays held in-game.
 
 ## Requirements
 
-- Android 8.0+ (tested on Android 10–15) and a Bluetooth gamepad paired to it (Xbox One tested)
+- Android 7.0+ (tested on Android 10–15) and a Bluetooth gamepad paired to it (Xbox One tested)
 - Windows 10/11 with the [ViGEmBus driver](https://vigembusdriver.com/)
-- Both devices on the same network · TCP port **39500** allowed in Windows Firewall
+- Both devices on the same network · TCP port **39500** (and UDP **39501** for automatic discovery) allowed in Windows Firewall
 
 ## Build
 
@@ -44,7 +45,16 @@ cd Bluetooth-receptor-onLAN
 ./build-android-adb.ps1   # build and install over adb
 ```
 
-Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download) and the Android SDK (Android Studio installs it).
+Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download) and the Android SDK (Android Studio installs it) with JDK 17.
+
+No toolchain? Every CI run publishes a debug **APK** and the **Windows server .exe** as downloadable artifacts (Actions → latest run → Artifacts).
+
+### Tests
+
+```sh
+dotnet test pc-server.Tests                    # wire protocol (runs on any OS)
+cd android-app && ./gradlew testDebugUnitTest  # button mapping
+```
 
 ## Usage
 
@@ -56,7 +66,8 @@ Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download) and the Android
 
 ```
 android-app/   Kotlin client: input capture, overlay, foreground service
-pc-server/     .NET 8 tray app: TCP server + ViGEm virtual controller
+pc-server/     .NET 8 tray app: TCP server + ViGEm virtual controller (Protocol.cs = wire format)
+pc-server.Tests/ xUnit tests for the protocol
 build-*.ps1    build scripts
 ```
 

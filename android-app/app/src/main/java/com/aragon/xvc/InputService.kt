@@ -77,6 +77,12 @@ class InputService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // START_STICKY restarts deliver a null intent: reconnect to the saved host instead
+        // of sitting idle with the notification still showing.
+        if (intent == null && !targetHost.isNullOrBlank()) {
+            desiredConnected = true
+            startOrRetryConnect()
+        }
         when (intent?.action) {
             ACTION_STOP -> {
                 desiredConnected = false
@@ -272,14 +278,17 @@ class InputService : Service() {
     }
 
     // --- Envío periódico del estado del mando ---
+    // Changes are already sent immediately from the overlay; this only re-sends the
+    // current state so a lost packet or a reconnect never leaves a button "stuck".
+    // It used to run every 0.5 ms (~2000 JSON messages/s, even while disconnected),
+    // which burned CPU/battery and flooded the Wi-Fi for no latency gain.
     private fun startPeriodicSender() {
         periodicSenderRunning = true
         periodicSenderThread = Thread {
             while (periodicSenderRunning) {
                 try {
-                    // Enviar siempre el estado actual, aunque no haya cambios
-                    client.sendState(state)
-                    Thread.sleep(0, 500_000) // 0.5 ms = 500,000 ns
+                    if (client.isConnected()) client.sendState(state)
+                    Thread.sleep(if (client.isConnected()) RESEND_INTERVAL_MS else 250L)
                 } catch (_: InterruptedException) {
                     break
                 } catch (_: Exception) {
@@ -301,6 +310,7 @@ class InputService : Service() {
     companion object {
         const val ACTION_STOP = "STOP"
         const val ACTION_CONNECT = "CONNECT"
+        const val RESEND_INTERVAL_MS = 20L
     }
 }
 

@@ -95,7 +95,6 @@ namespace XvcPcServer
                                 yield return (ua.Address, ni.Name);
                     }
                 }
-                string Escape(string s) => s.Replace("\\", "\\\\").Replace("\"", "\\\"");
 
                 var primary = GetPrimaryIPv4();
                 var bindAddress = hostArg != null ? ResolveBindAddress(hostArg) : (primary ?? IPAddress.Any);
@@ -139,7 +138,7 @@ namespace XvcPcServer
                 log($"Sugerencia firewall (PowerShell admin): netsh advfirewall firewall add rule name=\"XVC {port}\" dir=in action=allow protocol=TCP localport={port}");
 
                 // UDP discovery (39501)
-                const int discoveryPort = 39501;
+                const int discoveryPort = Protocol.DiscoveryPort;
                 log($"Discovery UDP en 0.0.0.0:{discoveryPort}");
                 _ = Task.Run(async () =>
                 {
@@ -149,15 +148,17 @@ namespace XvcPcServer
                         udp.EnableBroadcast = true;
                         while (!token.IsCancellationRequested)
                         {
-                            var res = await udp.ReceiveAsync();
+                            // Pass the token so Stop() releases port 39501 (it used to stay bound).
+                            var res = await udp.ReceiveAsync(token);
                             var msg = Encoding.UTF8.GetString(res.Buffer);
-                            if (!msg.StartsWith("XVC_DISCOVER")) continue;
+                            if (!msg.StartsWith(Protocol.DiscoveryRequest)) continue;
                             var advIp = bindAddress.Equals(IPAddress.Any) ? (primary?.ToString() ?? "0.0.0.0") : bindAddress.ToString();
-                            var payload = $"{{\"t\":\"xvc\",\"ip\":\"{advIp}\",\"port\":{port},\"name\":\"{Escape(Environment.MachineName)}\"}}";
+                            var payload = Protocol.DiscoveryReply(advIp, port, Environment.MachineName);
                             var bytes = Encoding.UTF8.GetBytes(payload);
                             await udp.SendAsync(bytes, bytes.Length, res.RemoteEndPoint);
                         }
                     }
+                    catch (OperationCanceledException) { }
                     catch (Exception ex)
                     {
                         log($"Discovery UDP error: {ex.Message}");
@@ -173,31 +174,29 @@ namespace XvcPcServer
                     try
                     {
                         using var ns = client.GetStream();
-                        using var reader = new StreamReader(ns, new UTF8Encoding(false), detectEncodingFromByteOrderMarks: false, bufferSize: 8192, leaveOpen: false);
+                        var reader = new LineReader(ns);
+                        int badLines = 0;
                         string? line;
-                        while ((line = await reader.ReadLineAsync()) != null)
+                        // The app sends a ping every 3 s (and the background service re-sends state every 20 ms),
+                        // so silence means the phone is gone: release every button instead of
+                        // leaving them held until TCP notices, which can take minutes.
+                        while ((line = await reader.ReadLineAsync(IdleTimeout, token)) != null)
                         {
-                            if (line.Length == 0) continue;
-                            try
+                            if (Protocol.TryParseState(line, out var st, out var err))
                             {
-                                using var doc = JsonDocument.Parse(line);
-                                var root = doc.RootElement;
-                                if (!root.TryGetProperty("t", out var tProp) || tProp.GetString() != "state") continue;
-                                var btn = root.GetProperty("btn").GetInt32();
-                                var lx = (short)root.GetProperty("lx").GetInt32();
-                                var ly = (short)root.GetProperty("ly").GetInt32();
-                                var rx = (short)root.GetProperty("rx").GetInt32();
-                                var ry = (short)root.GetProperty("ry").GetInt32();
-                                var lt = (byte)root.GetProperty("lt").GetInt32();
-                                var rt = (byte)root.GetProperty("rt").GetInt32();
-                                Apply(btn, lx, ly, rx, ry, lt, rt);
+                                Apply(st);
                             }
-                            catch (Exception ex)
+                            else if (err != null && badLines++ < 5)
                             {
-                                log($"JSON inválido: {ex.Message}");
+                                log($"JSON inválido: {err}");
                             }
                         }
                     }
+                    catch (TimeoutException)
+                    {
+                        log($"Sin datos del cliente en {IdleTimeout.TotalSeconds:0} s; se sueltan todos los botones.");
+                    }
+                    catch (OperationCanceledException) { }
                     catch (Exception ex)
                     {
                         log($"Error de conexión: {ex.Message}");
@@ -296,10 +295,12 @@ namespace XvcPcServer
         // Funciones locales de entrada
         private ViGEmClient? vigem;
         private IXbox360Controller? x360;
-        private void Apply(int btn, short lx, short ly, short rx, short ry, byte lt, byte rt)
+        private void Apply(PadState s)
         {
             if (x360 == null) return;
+            var btn = s.Buttons;
             bool Has(int m) => (btn & m) != 0;
+            x360.AutoSubmitReport = false;
             x360.SetButtonState(Xbox360Button.A, Has(Btn.A));
             x360.SetButtonState(Xbox360Button.B, Has(Btn.B));
             x360.SetButtonState(Xbox360Button.X, Has(Btn.X));
@@ -315,31 +316,16 @@ namespace XvcPcServer
             x360.SetButtonState(Xbox360Button.Down, Has(Btn.DPAD_DOWN));
             x360.SetButtonState(Xbox360Button.Left, Has(Btn.DPAD_LEFT));
             x360.SetButtonState(Xbox360Button.Right, Has(Btn.DPAD_RIGHT));
-            x360.SetAxisValue(Xbox360Axis.LeftThumbX, lx);
-            x360.SetAxisValue(Xbox360Axis.LeftThumbY, (short)-ly); // invertido
-            x360.SetAxisValue(Xbox360Axis.RightThumbX, rx);
-            x360.SetAxisValue(Xbox360Axis.RightThumbY, (short)-ry); // invertido
-            x360.SetSliderValue(Xbox360Slider.LeftTrigger, lt);
-            x360.SetSliderValue(Xbox360Slider.RightTrigger, rt);
+            x360.SetAxisValue(Xbox360Axis.LeftThumbX, s.Lx);
+            x360.SetAxisValue(Xbox360Axis.LeftThumbY, s.Ly);
+            x360.SetAxisValue(Xbox360Axis.RightThumbX, s.Rx);
+            x360.SetAxisValue(Xbox360Axis.RightThumbY, s.Ry);
+            x360.SetSliderValue(Xbox360Slider.LeftTrigger, s.Lt);
+            x360.SetSliderValue(Xbox360Slider.RightTrigger, s.Rt);
+            // One report per message instead of 21 (AutoSubmitReport sent one per setter).
+            x360.SubmitReport();
         }
-        private void Neutral() => Apply(0, 0, 0, 0, 0, 0, 0);
-        static class Btn
-        {
-            public const int A = 1 << 0;
-            public const int B = 1 << 1;
-            public const int X = 1 << 2;
-            public const int Y = 1 << 3;
-            public const int LB = 1 << 4;
-            public const int RB = 1 << 5;
-            public const int BACK = 1 << 6;
-            public const int START = 1 << 7;
-            public const int LS = 1 << 8;
-            public const int RS = 1 << 9;
-            public const int GUIDE = 1 << 10;
-            public const int DPAD_UP = 1 << 11;
-            public const int DPAD_DOWN = 1 << 12;
-            public const int DPAD_LEFT = 1 << 13;
-            public const int DPAD_RIGHT = 1 << 14;
-        }
+        private void Neutral() => Apply(PadState.Neutral);
+        private static readonly TimeSpan IdleTimeout = TimeSpan.FromSeconds(8);
     }
 }

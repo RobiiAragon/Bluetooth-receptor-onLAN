@@ -8,7 +8,7 @@
     <ApplicationIcon>WINICON.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Nefarius.ViGEm.Client" Version="1.*" />
+    <PackageReference Include="Nefarius.ViGEm.Client" Version="1.21.256" />
     <None Include="WINICON.ico" Pack="true" />
   </ItemGroup>
 </Project>

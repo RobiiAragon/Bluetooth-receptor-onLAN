@@ -4,16 +4,6 @@ import android.view.KeyEvent
 import android.view.MotionEvent
 import android.view.InputDevice
 
-// --- Compatibilidad KeyEvent PlayStation ---
-@Suppress("ClassName")
-object PSKeyCodes {
-    // Valores oficiales de Android KeyEvent (https://developer.android.com/reference/android/view/KeyEvent)
-    const val KEYCODE_BUTTON_CIRCLE = 111
-    const val KEYCODE_BUTTON_SQUARE = 99
-    const val KEYCODE_BUTTON_TRIANGLE = 100
-}
-
-
 data class ControllerState(
     var btnMask: Int = 0,
     var lx: Int = 0, // -32768..32767
@@ -118,10 +108,14 @@ object StadiaProfile : ControllerProfile {
 // Profile para PlayStation (DualShock 4, DualSense/PS5)
 object PlayStationProfile : ControllerProfile {
     override fun mapKeyToBtn(keyCode: Int): Int = when (keyCode) {
-        KeyEvent.KEYCODE_BUTTON_X -> Btn.A // X (abajo)
-        PSKeyCodes.KEYCODE_BUTTON_CIRCLE -> Btn.B // Círculo (derecha)
-        PSKeyCodes.KEYCODE_BUTTON_SQUARE -> Btn.X // Cuadrado (izquierda)
-        PSKeyCodes.KEYCODE_BUTTON_TRIANGLE -> Btn.Y // Triángulo (arriba)
+        // Android's key layouts for Sony pads report face buttons by position, like Xbox:
+        // Cross = BUTTON_A, Circle = BUTTON_B, Square = BUTTON_X, Triangle = BUTTON_Y.
+        // (The old PSKeyCodes used 99 for Square, which is BUTTON_X and collided with the
+        // Cross branch, and 111 for Circle, which is KEYCODE_ESCAPE.)
+        KeyEvent.KEYCODE_BUTTON_A -> Btn.A // Cruz (abajo)
+        KeyEvent.KEYCODE_BUTTON_B -> Btn.B // Círculo (derecha)
+        KeyEvent.KEYCODE_BUTTON_X -> Btn.X // Cuadrado (izquierda)
+        KeyEvent.KEYCODE_BUTTON_Y -> Btn.Y // Triángulo (arriba)
         KeyEvent.KEYCODE_BUTTON_L1 -> Btn.LB
         KeyEvent.KEYCODE_BUTTON_R1 -> Btn.RB
         KeyEvent.KEYCODE_BUTTON_THUMBL -> Btn.LS
@@ -241,11 +235,11 @@ object Btn {
 // DEPRECATED: Usa ControllerProfile.mapKeyToBtn
 fun mapKeyToBtn(keyCode: Int): Int = XboxProfile.mapKeyToBtn(keyCode)
 
-private fun axisToInt16(v: Float): Int {
+internal fun axisToInt16(v: Float): Int {
     val clamped = v.coerceIn(-1f, 1f)
     return (clamped * 32767f).toInt()
 }
-private fun axisToByte(v: Float): Int {
+internal fun axisToByte(v: Float): Int {
     val clamped = v.coerceIn(0f, 1f)
     return (clamped * 255f).toInt()
 }
