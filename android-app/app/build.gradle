@@ -30,6 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -37,4 +40,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0' // fix: artifact correcto
     implementation 'androidx.core:core-ktx:1.13.1'
+
+    testImplementation 'junit:junit:4.13.2'
 }
